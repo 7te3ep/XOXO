@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOXO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="siteName">XOXO</div>
+    </nav>
+    <section class="game">
+        <p class="textPannel">Click on start to play</p>
+        <div class="tictactoe">
+            <div onclick="_11Clicked()" class="square" id="11"></div>
+            <div onclick="_12Clicked()" class="square" id="12"></div>
+            <div onclick="_13Clicked()" class="square" id="13"></div>
+            <div onclick="_21Clicked()" class="square" id="21"></div>
+            <div onclick="_22Clicked()" class="square" id="22"></div>
+            <div onclick="_23Clicked()" class="square" id="23"></div>
+            <div onclick="_31Clicked()" class="square" id="31"></div>
+            <div onclick="_32Clicked()" class="square" id="32"></div>
+            <div onclick="_33Clicked()" class="square" id="33"></div>
+        </div>
+        <button onclick="startingGame()" class="control">Start</button>
+    </section>
+    <footer class="information"></footer>
+    <script src="game.js"></script>
+</body>
+</html>
