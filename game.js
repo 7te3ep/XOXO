@@ -11,11 +11,8 @@ var _32 = document.getElementById('32');
 var _33 = document.getElementById('33');
 
 let gameStatus = false;
-let playerTurn = 'O' 
-
-
-
-
+let playerTurn = 'O' ;
+let numberOfTurns = 0;
 
 function victoryCheck() {
     if (_12.textContent == playerTurn && _11.textContent == _12.textContent && _13.textContent == _12.textContent) {
@@ -49,6 +46,9 @@ function victoryCheck() {
     if (_22.textContent == playerTurn && _11.textContent == _22.textContent && _33.textContent == _22.textContent) {
         textPannel.textContent = 'Player ' + playerTurn +' Win !';
         gameStatus = false;}
+    if (numberOfTurns == 9) {
+        textPannel.textContent = 'Egality !!!';
+        gameStatus = false;}
 }
 
 function startingGame() {
@@ -68,14 +68,15 @@ function startingGame() {
     }
         else {
             gameStatus = true;
+            numberOfTurns =0;
             button.textContent = "Restart";
             textPannel.textContent = "Player 0 is playing first";
         }
 }
-
-function _11Clicked() {
-    if (gameStatus == true && _11.textContent == "") {
-        _11.textContent = playerTurn;
+function squareClicked(square) {
+    if (gameStatus == true && square.textContent == "") {
+        square.textContent = playerTurn;
+        numberOfTurns = numberOfTurns + 1;
         victoryCheck()
         if(gameStatus==true){
             if (playerTurn == 'O' ) {
@@ -88,142 +89,6 @@ function _11Clicked() {
         }
         
     }
-
 }
 
-function _12Clicked() {
-    if (gameStatus == true && _12.textContent == "") {
-        _12.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                        playerTurn = 'X';
-                    }
-                        else {
-                            playerTurn = 'O';
-                        }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-        
-    }
-}
-
-function _13Clicked() {
-    if (gameStatus == true && _13.textContent == "") {
-        _13.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _21Clicked() {
-    if (gameStatus == true && _21.textContent == "") {
-        _21.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _22Clicked() {
-    if (gameStatus == true && _22.textContent == "") {
-        _22.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _23Clicked() {
-    if (gameStatus == true && _23.textContent == "") {
-        _23.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _31Clicked() {
-    if (gameStatus == true && _31.textContent == "") {
-        _31.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _32Clicked() {
-    if (gameStatus == true && _32.textContent == "") {
-        _32.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
-
-function _33Clicked() {
-    if (gameStatus == true && _33.textContent == "") {
-        _33.textContent = playerTurn;
-        victoryCheck()
-        if(gameStatus==true){
-            if (playerTurn == 'O' ) {
-                playerTurn = 'X';
-            }
-                else {
-                    playerTurn = 'O';
-                }
-            textPannel.textContent = 'Player ' +playerTurn+ ' is playing'
-        }
-
-    }
-}
 

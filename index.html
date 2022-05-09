@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XOXO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <nav class="navbar">
@@ -14,15 +15,15 @@
     <section class="game">
         <p class="textPannel">Click on start to play</p>
         <div class="tictactoe">
-            <div onclick="_11Clicked()" class="square" id="11"></div>
-            <div onclick="_12Clicked()" class="square" id="12"></div>
-            <div onclick="_13Clicked()" class="square" id="13"></div>
-            <div onclick="_21Clicked()" class="square" id="21"></div>
-            <div onclick="_22Clicked()" class="square" id="22"></div>
-            <div onclick="_23Clicked()" class="square" id="23"></div>
-            <div onclick="_31Clicked()" class="square" id="31"></div>
-            <div onclick="_32Clicked()" class="square" id="32"></div>
-            <div onclick="_33Clicked()" class="square" id="33"></div>
+            <div onclick="squareClicked(_11)" class="square" id="11"></div>
+            <div onclick="squareClicked(_12)" class="square" id="12"></div>
+            <div onclick="squareClicked(_13)" class="square" id="13"></div>
+            <div onclick="squareClicked(_21)" class="square" id="21"></div>
+            <div onclick="squareClicked(_22)" class="square" id="22"></div>
+            <div onclick="squareClicked(_23)" class="square" id="23"></div>
+            <div onclick="squareClicked(_31)" class="square" id="31"></div>
+            <div onclick="squareClicked(_32)" class="square" id="32"></div>
+            <div onclick="squareClicked(_33)" class="square" id="33"></div>
         </div>
         <button onclick="startingGame()" class="control">Start</button>
     </section>

@@ -1,0 +1,27 @@
+@media (min-width: 0px) {
+    html {
+      font-size: 3.4px;
+    }
+  }
+  
+  @media (min-width: 350px) {
+    html {
+      font-size: 9px;
+    }
+  }
+  @media (min-width: 470px) {
+    html {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 600px) {
+    html {
+      font-size: 13px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    html {
+      font-size: 17px;
+    }
+  }

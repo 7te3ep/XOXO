@@ -40,7 +40,7 @@ nav {
 /* MAIN CONTENT */
 section {
     display: flex;
-    flex-basis: 80%;
+    flex-basis: 90%;
     width: 100%;
     box-sizing: border-box;
     padding: 5rem 0rem;
@@ -68,6 +68,8 @@ section {
 .tictactoe {
     display: grid;
     flex-basis: 80%;
+    max-width: 45rem;
+    max-height: 45rem;
     aspect-ratio: 1/1;
     grid-template-columns: repeat(3, 3fr);
     border: solid black 0.2rem;
@@ -105,10 +107,3 @@ section {
     aspect-ratio: 1/1;
 }
 
-/* FOOTER */
-footer {
-    display: flex;
-    flex-basis: 10%;
-    width: 100%;
-    background-color: whitesmoke;
-}
