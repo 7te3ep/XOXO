@@ -13,6 +13,7 @@ var _33 = document.getElementById('33');
 let gameStatus = false;
 let playerTurn = 'O' ;
 let numberOfTurns = 0;
+let darkMod = false;
 
 function victoryCheck() {
     if (_12.textContent == playerTurn && _11.textContent == _12.textContent && _13.textContent == _12.textContent) {
@@ -91,4 +92,33 @@ function squareClicked(square) {
     }
 }
 
+function toggleDarkMod() {
+    if (darkMod == false) {
+        darkMod = true;
+        document.querySelector('.game').style.backgroundColor = '#555';
+        document.querySelector('nav').style.backgroundColor = '#333';
+        document.querySelector('.siteName').style.color = 'white';
+        document.querySelector('.textPannel').style.backgroundColor = 'rgb(14, 82, 105)';
+        document.querySelector('.textPannel').style.color = 'white';
+        document.querySelector('.control').style.backgroundColor = 'rgb(77, 126, 77)';
+        document.querySelector('.control').style.color = 'white';
+        document.querySelector('.toggleMod').style.color = 'white';
+        document.querySelector('.switchButton').style.alignItems = 'flex-end';
+        document.querySelector('.switchButton').style.boxShadow = 'grey 0rem 0.3rem 1rem';
 
+    }
+        else {
+            darkMod = false;
+            document.querySelector('.game').style.backgroundColor = 'rgb(175, 175, 175)';
+            document.querySelector('nav').style.backgroundColor = 'white';
+            document.querySelector('.siteName').style.color = 'black';
+            document.querySelector('.textPannel').style.backgroundColor = 'lightblue';
+            document.querySelector('.textPannel').style.color = 'black';
+            document.querySelector('.control').style.backgroundColor = 'lightgreen';
+            document.querySelector('.control').style.color = 'black';
+            document.querySelector('.toggleMod').style.color = 'black';
+            document.querySelector('.switchButton').style.alignItems = 'flex-start';
+            document.querySelector('.switchButton').style.boxShadow = '#999 0rem 0.3rem 1rem';
+        }
+
+}
